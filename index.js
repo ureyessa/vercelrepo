@@ -6,6 +6,10 @@ const app = express();
 //Middleware: json() permite que la app entienda .json
 app.use(express.json());
 
+app.get('/uriel',(request, response)=>{
+    response.status(200).json({data: "Hola Uriel!"});
+})
+
 app.get('/',async(request, response)=>{
     const data = await serviceClients.getClients();
     response.status(200).json({data: data});
