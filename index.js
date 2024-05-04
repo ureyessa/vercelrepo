@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/uriel',(request, response)=>{
-    response.status(200).json({data: "Hola Uriel!"});
+    response.status(200).json({data: "Hola Uriel! Nuevo mensaje"});
 })
 
 app.get('/',async(request, response)=>{
